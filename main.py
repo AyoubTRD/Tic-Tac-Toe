@@ -6,7 +6,15 @@ board = ["-", "-", "-", "-", "-", "-", "-", "-", "-"]
 player = 'X'
 
 def give_instructions():
+    cprint("That's the position of each number", on_color="on_green", color="blue")
+    board_numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    print()
+
+    print(board_numbers[0] + '|' + board_numbers[1] + '|' + board_numbers[2])
+    print(board_numbers[3] + '|' + board_numbers[4] + '|' + board_numbers[5])
+    print(board_numbers[6] + '|' + board_numbers[7] + '|' + board_numbers[8])
     
+    print()
 
 def play_game():
     global board, player
@@ -106,7 +114,7 @@ def game_over():
 
     return (False, None)
 
-
+give_instructions()
 play_game()
 
 # THE OOP WAY! ⬇ (Not Complete), You can try to make it if I didn't
